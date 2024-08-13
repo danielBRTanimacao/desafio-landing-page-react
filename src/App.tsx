@@ -1,7 +1,11 @@
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+
 export default () => {
     return (
         <>
-            <h1>Hello its me you lokin for</h1>
+            <Nav />
+            <Header />
         </>
     );
 };
