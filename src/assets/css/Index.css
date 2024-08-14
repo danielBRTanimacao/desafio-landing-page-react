@@ -1,20 +1,47 @@
 :root {
     --rich-black: #0d1821;
+    --rich-black-darker-overflow: #060e14;
+    --rich-black-darker: #03080c;
     --baby-powder: #f0f4ef;
     --baby-gray: rgb(150, 145, 145);
     --lavander-pink: #e6aace;
     --sage: #bfcc94;
+    --principal-font: Satoshi-Black;
 }
+
+@font-face {
+    font-family: "Satoshi-Black";
+    src: url(../fonts/Satoshi-Black.ttf);
+}
+
 /*
     Configurações gerais
 */
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--rich-black);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--rich-black-darker);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rich-black-darker-overflow);
 }
 
 body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
     background-color: var(--rich-black);
     color: var(--baby-powder);
 }
@@ -23,6 +50,7 @@ body {
     Estilizando Navigation
 */
 .nav {
+    font-family: var(--principal-font) !important;
     padding: 0 1rem;
     display: flex;
     justify-content: space-between;
@@ -47,6 +75,10 @@ body {
     gap: 10px;
     padding: 0;
     list-style: none;
+
+    &.list-spaced {
+        gap: 50px;
+    }
 }
 
 .nav-title {
@@ -54,12 +86,23 @@ body {
 }
 
 .input-search {
-    background-color: var(--rich-black);
+    color: var(--baby-powder);
+    background-color: transparent;
     border: none;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .input-search::placeholder {
     color: var(--baby-powder);
+}
+
+.input-search:focus {
+    transition: border-bottom 0.2s ease-in-out;
+    border-bottom: 3px solid var(--baby-powder);
+    border-radius: 2px;
 }
 
 .icon-search {
@@ -68,4 +111,29 @@ body {
 
 .li-icons {
     margin: 0 15px;
+}
+
+.stick-top {
+    position: sticky;
+    top: 0;
+}
+
+.bg-nav {
+    background-color: var(--rich-black);
+}
+
+/*Configuração principal no header*/
+.header {
+    padding: 0 18px;
+    height: 100dvh;
+}
+
+.display-1 {
+    margin: 0;
+    font-weight: 300 !important;
+    font-size: 12.5em;
+}
+
+.display-1 .mr-start {
+    margin-left: 1.5em;
 }
