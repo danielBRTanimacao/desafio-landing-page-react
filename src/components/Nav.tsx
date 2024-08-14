@@ -1,5 +1,8 @@
+import CSS from "csstype";
+
 export default () => {
     let height_svgs: string = "22";
+    let padding_right: CSS.Properties = { paddingRight: "15px" };
     return (
         <>
             <nav className="nav stick-top bg-nav">
@@ -23,7 +26,7 @@ export default () => {
                         </li>
                     </ul>
                 </div>
-                <ul className="list-navigation">
+                <ul className="list-navigation" style={padding_right}>
                     <li>
                         <form action="#" method="get" className="nav">
                             <svg
