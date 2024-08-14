@@ -1,6 +1,7 @@
 :root {
     --rich-black: #0d1821;
     --baby-powder: #f0f4ef;
+    --baby-gray: rgb(150, 145, 145);
     --lavander-pink: #e6aace;
     --sage: #bfcc94;
 }
@@ -25,6 +26,20 @@ body {
     padding: 0 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    &.div-nav {
+        gap: 90px;
+    }
+}
+
+.link-nav {
+    color: var(--baby-powder);
+    text-decoration: none;
+}
+
+.link-nav:hover {
+    color: var(--baby-gray);
 }
 
 .list-navigation {
@@ -36,4 +51,21 @@ body {
 
 .nav-title {
     font-size: large;
+}
+
+.input-search {
+    background-color: var(--rich-black);
+    border: none;
+}
+
+.input-search::placeholder {
+    color: var(--baby-powder);
+}
+
+.icon-search {
+    margin: 0 6px;
+}
+
+.li-icons {
+    margin: 0 15px;
 }
