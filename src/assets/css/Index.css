@@ -137,3 +137,9 @@ body {
 .display-1 .mr-start {
     margin-left: 1.5em;
 }
+
+.div-margin-p {
+    font-family: var(--principal-font);
+    margin-top: 160px;
+    width: 120px;
+}
