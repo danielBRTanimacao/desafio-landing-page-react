@@ -124,6 +124,11 @@ body {
 
 /*Configuração principal no header*/
 .header {
+    /* background-image: url(../images/headphone-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position-y: 150px; */
     padding: 0 18px;
     height: 100dvh;
 }
@@ -141,5 +146,5 @@ body {
 .div-margin-p {
     font-family: var(--principal-font);
     margin-top: 160px;
-    width: 120px;
+    width: 300px;
 }

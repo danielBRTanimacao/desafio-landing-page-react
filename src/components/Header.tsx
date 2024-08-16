@@ -7,7 +7,10 @@ export default () => {
                     OF 100 <span className="mr-start">YEARS</span>
                 </h1>
                 <div className="div-margin-p">
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Ipsam, modi! Lorem, ipsum. lorem
+                    </p>
                 </div>
             </header>
         </>
