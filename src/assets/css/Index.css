@@ -63,6 +63,7 @@ h2 {
 }
 
 body {
+    padding: 0 5rem !important;
     font-size: var(--body-text-font) !important;
     font-family: var(--body-font) !important;
 }
@@ -74,4 +75,17 @@ nav {
 
 .legends {
     font-size: var(--text-legends-font) !important;
+}
+
+/*Estilizando o NAV*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul,
+li {
+    list-style: none;
+    gap: 40px;
 }

@@ -1,9 +1,9 @@
 export default () => {
     return (
         <>
-            <nav>
+            <nav className="nav">
                 <h2>Lorem</h2>
-                <ul>
+                <ul className="nav">
                     <li>
                         <a href="#">Home</a>
                     </li>
