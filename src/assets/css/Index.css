@@ -14,9 +14,11 @@
     --big-font: 48px;
     --medium-font: 32px;
     --small-font: 28px;
-    --cta-font: 22px;
-    --nav-font: 16px;
-    --legends-font: 14px;
+
+    --cta-text-font: 22px;
+    --body-text-font: 18px;
+    --nav-footer-font: 16px;
+    --text-legends-font: 14px;
 }
 
 /* width */
@@ -45,14 +47,31 @@
     line-height: 1.4 !important;
 }
 
+h1,
+h2,
+h3 {
+    font-size: var(--small-font) !important;
+    font-family: var(--title-font) !important;
+}
+
 h1 {
     font-size: var(--big-font) !important;
 }
 
 h2 {
-    font-size: var(--medium-font);
+    font-size: var(--medium-font) !important;
 }
 
-h3 {
-    font-size: var(--small-font);
+body {
+    font-size: var(--body-text-font) !important;
+    font-family: var(--body-font) !important;
+}
+
+footer,
+nav {
+    font-size: var(--nav-footer-font) !important;
+}
+
+.legends {
+    font-size: var(--text-legends-font) !important;
 }
