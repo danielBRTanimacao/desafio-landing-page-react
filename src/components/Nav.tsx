@@ -13,10 +13,10 @@ export default () => {
                         <a href="#">Menu</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">Sobre</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">Contato</a>
                     </li>
                     <li>
                         <form className="flex-form" action="#" method="get">

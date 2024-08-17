@@ -198,14 +198,15 @@ li a,
 
 .main-hero .article-blockots {
     display: flex;
-    gap: 10px;
+    gap: 40px;
 }
 
 .blockots {
     border-radius: 10px;
-    width: 190px;
+    width: 150px;
+    height: 150px;
     text-align: center;
-    background-color: blue;
+    background-color: var(--more-darker-orange);
     color: white;
     padding: var(--medium-font) !important;
 }
