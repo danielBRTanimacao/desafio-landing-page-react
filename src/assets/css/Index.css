@@ -182,3 +182,30 @@ li a,
 .btn-rounded {
     display: flex;
 }
+
+/* .bi-chevron-right {
+    border: 2px solid black;
+    border-radius: 100%;
+} */
+
+/* Estilizando a main */
+
+.main-hero {
+    margin-top: var(--big-font) !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-hero .article-blockots {
+    display: flex;
+    gap: 10px;
+}
+
+.blockots {
+    border-radius: 10px;
+    width: 190px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: var(--medium-font) !important;
+}
