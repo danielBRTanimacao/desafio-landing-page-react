@@ -7,6 +7,7 @@
     --yellow-simple: #f7b801;
     --orange-simple: #f18701;
     --darker-orange: #f35b04;
+    --more-darker-orange: #b43702;
 
     --title-font: "Montserrat", sans-serif;
     --body-font: "Open Sans", sans-serif;
@@ -63,7 +64,7 @@ h2 {
 }
 
 body {
-    padding: 0 5rem !important;
+    padding: 1rem 5rem !important;
     font-size: var(--body-text-font) !important;
     font-family: var(--body-font) !important;
 }
@@ -73,8 +74,39 @@ nav {
     font-size: var(--nav-footer-font) !important;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input {
+    outline: none;
+}
+
 .legends {
     font-size: var(--text-legends-font) !important;
+    font-weight: 600;
+    color: gray;
+}
+
+/*Cores*/
+
+.orange-title {
+    color: var(--darker-orange);
+}
+
+/*Botões redondos*/
+
+.btn-rounded {
+    border: none;
+    background-color: var(--darker-orange);
+    color: white;
+    border-radius: 80px;
+    padding: 0.5rem 1.2rem !important;
+}
+
+.btn-rounded:hover {
+    background-color: var(--more-darker-orange);
 }
 
 /*Estilizando o NAV*/
@@ -88,4 +120,65 @@ ul,
 li {
     list-style: none;
     gap: 40px;
+}
+
+li a {
+    color: grey;
+}
+
+li a,
+.btn-rounded {
+    font-weight: 640;
+}
+
+.active-link {
+    color: var(--darker-orange);
+}
+
+.flex-form {
+    display: flex;
+    box-shadow: #d5d5d5 1px 1px 11px 8px;
+    padding: 10px !important;
+    border-radius: 20px !important;
+}
+
+.flex-form.input-search {
+    box-shadow: none !important;
+    padding: 0 0 0 10px !important;
+    border: none;
+}
+
+/* modificando o header principal */
+
+.title-hero {
+    font-size: 68px !important;
+}
+
+.title-pizza {
+    color: var(--darker-orange);
+}
+
+.header-hero {
+    margin-top: var(--big-font) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-article {
+    width: 500px;
+}
+
+.btn-rounded.none-bg {
+    background-color: white !important;
+    color: black;
+}
+
+.division-paragraph {
+    padding: 2rem 0 !important;
+}
+
+.aside-btns,
+.btn-rounded {
+    display: flex;
 }
