@@ -1,22 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Road+Rage&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Road+Rage&display=swap");
+
 :root {
-    --rich-black: #0d1821;
-    --rich-black-darker-overflow: #060e14;
-    --rich-black-darker: #03080c;
-    --baby-powder: #f0f4ef;
-    --baby-gray: rgb(150, 145, 145);
-    --lavander-pink: #e6aace;
-    --sage: #bfcc94;
-    --principal-font: Satoshi-Black;
-}
+    --darker-purple: #3d348b;
+    --light-purple: #7678ed;
+    --yellow-simple: #f7b801;
+    --orange-simple: #f18701;
+    --darker-orange: #f35b04;
 
-@font-face {
-    font-family: "Satoshi-Black";
-    src: url(../fonts/Satoshi-Black.ttf);
-}
+    --title-font: "Montserrat", sans-serif;
+    --body-font: "Open Sans", sans-serif;
 
-/*
-    Configurações gerais
-*/
+    --big-font: 48px;
+    --medium-font: 32px;
+    --small-font: 28px;
+    --cta-font: 22px;
+    --nav-font: 16px;
+    --legends-font: 14px;
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -25,7 +26,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--rich-black);
+    background: var(--baby-powder);
 }
 
 /* Handle */
@@ -38,113 +39,20 @@
     background: var(--rich-black-darker-overflow);
 }
 
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-    background-color: var(--rich-black);
-    color: var(--baby-powder);
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
 }
 
-/*
-    Estilizando Navigation
-*/
-.nav {
-    font-family: var(--principal-font) !important;
-    padding: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &.div-nav {
-        gap: 90px;
-    }
+h1 {
+    font-size: var(--big-font) !important;
 }
 
-.link-nav {
-    color: var(--baby-powder);
-    text-decoration: none;
+h2 {
+    font-size: var(--medium-font);
 }
 
-.link-nav:hover {
-    color: var(--baby-gray);
-}
-
-.list-navigation {
-    display: flex;
-    gap: 10px;
-    padding: 0;
-    list-style: none;
-
-    &.list-spaced {
-        gap: 50px;
-    }
-}
-
-.nav-title {
-    font-size: large;
-}
-
-.input-search {
-    color: var(--baby-powder);
-    background-color: transparent;
-    border: none;
-
-    &:focus {
-        outline: none;
-    }
-}
-
-.input-search::placeholder {
-    color: var(--baby-powder);
-}
-
-.input-search:focus {
-    transition: border-bottom 0.2s ease-in-out;
-    border-bottom: 3px solid var(--baby-powder);
-    border-radius: 2px;
-}
-
-.icon-search {
-    margin: 0 6px;
-}
-
-.li-icons {
-    margin: 0 15px;
-}
-
-.stick-top {
-    position: sticky;
-    top: 0;
-}
-
-.bg-nav {
-    background-color: var(--rich-black);
-}
-
-/*Configuração principal no header*/
-.header {
-    /* background-image: url(../images/headphone-white.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-position-y: 150px; */
-    padding: 0 18px;
-    height: 100dvh;
-}
-
-.display-1 {
-    margin: 0;
-    font-weight: 300 !important;
-    font-size: 12.63em;
-}
-
-.display-1 .mr-start {
-    margin-left: 1.5em;
-}
-
-.div-margin-p {
-    font-family: var(--principal-font);
-    margin-top: 160px;
-    width: 300px;
+h3 {
+    font-size: var(--small-font);
 }
