@@ -148,6 +148,10 @@ li a,
     border: none;
 }
 
+.dropdown {
+    display: none;
+}
+
 /* modificando o header principal */
 
 .title-hero {
@@ -221,6 +225,9 @@ li a,
     body {
         padding: 0.5rem 0.5rem !important;
     }
+    .dropdown {
+        display: block;
+    }
     ul.nav {
         display: none;
     }
@@ -271,6 +278,12 @@ li a,
 @media (max-width: 1280.98px) {
     .main-hero {
         display: block;
+    }
+    .main-hero div .small-article {
+        width: auto !important;
+    }
+    .main-hero div h2 {
+        padding: 1rem !important;
     }
 }
 
