@@ -47,7 +47,7 @@ export default () => {
                         </a>
                     </aside>
                 </article>
-                <div>
+                <div className="img-edited">
                     <img
                         src="https://via.placeholder.com/800x500"
                         alt="img-pizza"
