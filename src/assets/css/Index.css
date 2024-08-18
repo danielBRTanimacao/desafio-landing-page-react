@@ -224,6 +224,17 @@ li a,
     ul.nav {
         display: none;
     }
+    .main-hero .article-blockots {
+        gap: 5px;
+        flex-direction: column;
+    }
+    .blockots {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -254,6 +265,12 @@ li a,
     .img-edited {
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (max-width: 1280.98px) {
+    .main-hero {
+        display: block;
     }
 }
 
