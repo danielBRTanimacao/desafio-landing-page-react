@@ -75,6 +75,7 @@ export default () => {
                 </article>
                 <div className="img-edited carousel-btn">
                     <button
+                        className="left"
                         onClick={backimage}
                         disabled={backIsDisabled}
                         style={{
