@@ -4,19 +4,19 @@ import PizzaImageSecond from "../assets/images/pizza-image-second.png";
 
 export default () => {
     const [indexImage, indexImageSet] = useState(PizzaImage);
-    const [clicked, clickedSet] = useState(false);
+    const [backIsDisabled, backIsDisabledSet] = useState(true);
+    const [rightIsDisabled, rightIsDisabledSet] = useState(false);
+
+    const backimage = () => {
+        indexImageSet(PizzaImage);
+        backIsDisabledSet(true);
+        rightIsDisabledSet(false);
+    };
 
     const nextImage = () => {
-        clickedSet(true);
-
-        if (clicked) {
-            clickedSet(false);
-            // o btn para de funcionar
-        } else {
-            // o btn right volta a funcionar
-            clickedSet(true);
-        }
         indexImageSet(PizzaImageSecond);
+        backIsDisabledSet(false);
+        rightIsDisabledSet(true);
     };
 
     return (
@@ -73,10 +73,34 @@ export default () => {
                         </a>
                     </aside>
                 </article>
-                <div className="img-edited">
-                    <button>Back</button>
+                <div className="img-edited carousel-btn">
+                    <button
+                        onClick={backimage}
+                        disabled={backIsDisabled}
+                        style={{
+                            position: "absolute",
+                            left: "10px",
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            zIndex: 1
+                        }}
+                    >
+                        &#11207;
+                    </button>
                     <img src={indexImage} alt="img-pizza" />
-                    <button onClick={nextImage}>Next</button>
+                    <button
+                        onClick={nextImage}
+                        disabled={rightIsDisabled}
+                        style={{
+                            position: "absolute",
+                            right: "10px",
+                            top: "50%",
+                            transform: "translateY(-50%)",
+                            zIndex: 1
+                        }}
+                    >
+                        &#11208;
+                    </button>
                 </div>
             </header>
         </>

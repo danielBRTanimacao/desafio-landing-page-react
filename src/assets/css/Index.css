@@ -195,6 +195,30 @@ li a,
     gap: 10px;
 }
 
+.carousel-btn {
+    position: relative;
+    display: inline-block;
+}
+
+.carousel-btn button {
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    font-size: var(--medium-font);
+    background-color: transparent;
+    color: var(--orange-simple);
+    border: none;
+}
+.carousel-btn button:disabled {
+    display: none;
+}
+
+.carousel-btn button:hover {
+    transition: all 0.2s ease-in-out;
+    color: var(--more-darker-orange);
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
 /* .bi-chevron-right {
     border: 2px solid black;
     border-radius: 100%;
