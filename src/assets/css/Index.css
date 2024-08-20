@@ -232,10 +232,29 @@ li a,
     );
 }
 
-/* .bi-chevron-right {
-    border: 2px solid black;
-    border-radius: 100%;
-} */
+.container-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.gallery-wraper {
+    overflow-x: auto;
+}
+
+.gallery-wraper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-wraper {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
 /* Estilizando a main */
 

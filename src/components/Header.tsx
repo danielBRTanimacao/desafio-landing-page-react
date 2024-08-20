@@ -1,20 +1,18 @@
 import { useState } from "react";
 import PizzaImage from "../assets/images/pizza-image.png";
 import PizzaImageSecond from "../assets/images/pizza-image-second.png";
+import PizzaSmall from "../assets/images/pizza-small.png";
 
 export default () => {
-    const [indexImage, indexImageSet] = useState(PizzaImage);
     const [backIsDisabled, backIsDisabledSet] = useState(true);
     const [rightIsDisabled, rightIsDisabledSet] = useState(false);
 
     const backimage = () => {
-        indexImageSet(PizzaImage);
         backIsDisabledSet(true);
         rightIsDisabledSet(false);
     };
 
     const nextImage = () => {
-        indexImageSet(PizzaImageSecond);
         backIsDisabledSet(false);
         rightIsDisabledSet(true);
     };
@@ -26,11 +24,7 @@ export default () => {
                     <h1 className="title-hero">
                         Tudo fica melhor com{" "}
                         <span className="title-pizza fluid-image">
-                            PIZZA{" "}
-                            <img
-                                src="https://via.placeholder.com/80x80"
-                                alt=""
-                            />
+                            PIZZA <img src={PizzaSmall} alt="pizza-small" />
                         </span>
                     </h1>
                     <p className="legends division-paragraph">
@@ -88,7 +82,17 @@ export default () => {
                     >
                         &#11207;
                     </button>
-                    <img src={indexImage} alt="img-pizza" />
+                    <aside className="container-carousel">
+                        <div className="gallery-wraper">
+                            <div className="gallery">
+                                <img src={PizzaImage} alt={PizzaImage} />
+                                <img
+                                    src={PizzaImageSecond}
+                                    alt={PizzaImageSecond}
+                                />
+                            </div>
+                        </div>
+                    </aside>
                     <button
                         onClick={nextImage}
                         disabled={rightIsDisabled}
