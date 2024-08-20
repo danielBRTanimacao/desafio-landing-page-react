@@ -1,26 +1,7 @@
-import { useState } from "react";
-import PizzaImage from "../assets/images/pizza-image.png";
-import PizzaImageSecond from "../assets/images/pizza-image-second.png";
+import PrincipalImage from "../assets/images/principal-image.png";
 import PizzaSmall from "../assets/images/pizza-small.png";
 
 export default () => {
-    const [PizzaImageCurrent, PizzaImageCurrentSet] = useState(PizzaImage);
-
-    const [backIsDisabled, backIsDisabledSet] = useState(true);
-    const [rightIsDisabled, rightIsDisabledSet] = useState(false);
-
-    const backimage = () => {
-        backIsDisabledSet(true);
-        rightIsDisabledSet(false);
-        PizzaImageCurrentSet(PizzaImage);
-    };
-
-    const nextImage = () => {
-        backIsDisabledSet(false);
-        rightIsDisabledSet(true);
-        PizzaImageCurrentSet(PizzaImageSecond);
-    };
-
     return (
         <>
             <header className="header-hero">
@@ -72,36 +53,9 @@ export default () => {
                     </aside>
                 </article>
                 <div className="img-edited carousel-btn">
-                    <button
-                        className="left"
-                        onClick={backimage}
-                        disabled={backIsDisabled}
-                        style={{
-                            position: "absolute",
-                            left: "10px",
-                            top: "50%",
-                            transform: "translateY(-50%)",
-                            zIndex: 1
-                        }}
-                    >
-                        &#11207;
-                    </button>
                     <aside className="container-carousel">
-                        <img src={PizzaImageCurrent} alt={PizzaImageCurrent} />
+                        <img src={PrincipalImage} alt={PrincipalImage} />
                     </aside>
-                    <button
-                        onClick={nextImage}
-                        disabled={rightIsDisabled}
-                        style={{
-                            position: "absolute",
-                            right: "10px",
-                            top: "50%",
-                            transform: "translateY(-50%)",
-                            zIndex: 1
-                        }}
-                    >
-                        &#11208;
-                    </button>
                 </div>
             </header>
         </>

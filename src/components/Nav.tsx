@@ -9,7 +9,7 @@ export default () => {
     return (
         <>
             <nav className="nav">
-                <h2 className="orange-title">Lorem</h2>
+                <h2 className="orange-title title-pizza">Lorem</h2>
                 <ul className="nav">
                     <li>
                         <a href="#" className="active-link" aria-current="page">

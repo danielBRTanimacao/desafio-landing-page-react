@@ -190,7 +190,7 @@ div.dropdown-menu li.pad-top {
 }
 
 .title-pizza {
-    font-family: var(--pizza-font);
+    font-family: var(--pizza-font) !important;
     color: var(--darker-orange);
 }
 
@@ -224,49 +224,6 @@ div.dropdown-menu li.pad-top {
     gap: 10px;
 }
 
-.carousel-btn {
-    position: relative;
-    display: inline-block;
-}
-
-.carousel-btn button {
-    transition: all 0.3s ease-in-out;
-    height: 95%;
-    font-size: var(--medium-font);
-    background-color: transparent;
-    color: var(--orange-simple);
-    border: none;
-}
-.carousel-btn button:disabled {
-    display: none;
-}
-
-.carousel-btn button:hover {
-    transition: all 0.2s ease-in-out;
-    color: var(--more-darker-orange);
-    border-radius: 0 5px 5px 0;
-    background-image: linear-gradient(
-        to right,
-        rgb(255, 255, 255, 0.1),
-        rgb(255, 255, 255, 0.6)
-    );
-    cursor: pointer;
-}
-.carousel-btn .left:hover {
-    border-radius: 5px 0 0 5px;
-    background-image: linear-gradient(
-        to left,
-        rgb(255, 255, 255, 0.1),
-        rgb(255, 255, 255, 0.6)
-    );
-}
-
-.container-carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 /* Estilizando a main */
 
 .main-hero {
@@ -277,7 +234,7 @@ div.dropdown-menu li.pad-top {
 
 .main-hero .article-blockots {
     display: flex;
-    gap: 40px;
+    gap: 50px;
 }
 
 .blockots {
@@ -371,5 +328,9 @@ div.dropdown-menu li.pad-top {
 @media (max-width: 1399.98px) {
     body {
         padding: 0.5rem 2rem !important;
+    }
+    .main-hero .article-blockots {
+        display: flex;
+        gap: 52px;
     }
 }
