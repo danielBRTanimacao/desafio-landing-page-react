@@ -3,8 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Road+Rage&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-    --darker-purple: #3d348b;
-    --light-purple: #7678ed;
     --yellow-simple: #f7b801;
     --orange-simple: #f18701;
     --darker-orange: #f35b04;
@@ -154,6 +152,37 @@ li a,
     display: none;
 }
 
+@keyframes showDropdown {
+    from {
+        height: 0;
+    }
+    to {
+        height: 158.8px;
+    }
+}
+
+.dropdown-menu {
+    animation: showDropdown 0.2s ease-in-out;
+}
+
+div.dropdown-menu li.pad-top {
+    padding-top: var(--nav-footer-font) !important;
+}
+
+.bi-list:hover {
+    width: 40px;
+    height: 40px;
+    color: var(--orange-simple);
+    transition: all 0.2s ease-in-out;
+}
+
+.bi-x:hover {
+    width: 40px;
+    height: 40px;
+    color: var(--darker-orange);
+    transition: all 0.2s ease-in-out;
+}
+
 /* modificando o header principal */
 
 .title-hero {
@@ -238,24 +267,6 @@ li a,
     margin: 0 auto;
 }
 
-.gallery {
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.gallery-wraper {
-    overflow-x: auto;
-}
-
-.gallery-wraper::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery-wraper {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
 /* Estilizando a main */
 
 .main-hero {
@@ -282,6 +293,12 @@ li a,
 @media (max-width: 575.98px) {
     body {
         padding: 0.3rem 0.2rem !important;
+    }
+}
+
+@media (min-width: 767.98px) {
+    .dropdown-menu {
+        display: none;
     }
 }
 

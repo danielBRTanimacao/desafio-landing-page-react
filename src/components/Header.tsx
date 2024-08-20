@@ -4,17 +4,21 @@ import PizzaImageSecond from "../assets/images/pizza-image-second.png";
 import PizzaSmall from "../assets/images/pizza-small.png";
 
 export default () => {
+    const [PizzaImageCurrent, PizzaImageCurrentSet] = useState(PizzaImage);
+
     const [backIsDisabled, backIsDisabledSet] = useState(true);
     const [rightIsDisabled, rightIsDisabledSet] = useState(false);
 
     const backimage = () => {
         backIsDisabledSet(true);
         rightIsDisabledSet(false);
+        PizzaImageCurrentSet(PizzaImage);
     };
 
     const nextImage = () => {
         backIsDisabledSet(false);
         rightIsDisabledSet(true);
+        PizzaImageCurrentSet(PizzaImageSecond);
     };
 
     return (
@@ -83,15 +87,7 @@ export default () => {
                         &#11207;
                     </button>
                     <aside className="container-carousel">
-                        <div className="gallery-wraper">
-                            <div className="gallery">
-                                <img src={PizzaImage} alt={PizzaImage} />
-                                <img
-                                    src={PizzaImageSecond}
-                                    alt={PizzaImageSecond}
-                                />
-                            </div>
-                        </div>
+                        <img src={PizzaImageCurrent} alt={PizzaImageCurrent} />
                     </aside>
                     <button
                         onClick={nextImage}
