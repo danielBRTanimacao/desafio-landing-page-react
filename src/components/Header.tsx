@@ -4,20 +4,17 @@ import PizzaImageSecond from "../assets/images/pizza-image-second.png";
 import PizzaSmall from "../assets/images/pizza-small.png";
 
 export default () => {
-    const [changeImage, changeImageSet] = useState(["current", ""]);
     const [backIsDisabled, backIsDisabledSet] = useState(true);
     const [rightIsDisabled, rightIsDisabledSet] = useState(false);
 
     const backimage = () => {
         backIsDisabledSet(true);
         rightIsDisabledSet(false);
-        changeImageSet(["current", ""]);
     };
 
     const nextImage = () => {
         backIsDisabledSet(false);
         rightIsDisabledSet(true);
-        changeImageSet(["", "current"]);
     };
 
     return (
@@ -88,15 +85,10 @@ export default () => {
                     <aside className="container-carousel">
                         <div className="gallery-wraper">
                             <div className="gallery">
-                                <img
-                                    src={PizzaImage}
-                                    alt={PizzaImage}
-                                    className={changeImage[0]}
-                                />
+                                <img src={PizzaImage} alt={PizzaImage} />
                                 <img
                                     src={PizzaImageSecond}
                                     alt={PizzaImageSecond}
-                                    className={changeImage[1]}
                                 />
                             </div>
                         </div>
